@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     private var progressView: LMProgressView?
     
+    private var otherProgressView: LMOtherProgressView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,14 +31,20 @@ class ViewController: UIViewController {
         let slider = UISlider(frame: CGRect(x: 100, y: 400, width: 300, height: 50))
         slider.addTarget(self, action: #selector(sliderAction(slider:)), for: .valueChanged)
         view.addSubview(slider)
+        
+        otherProgressView = LMOtherProgressView(frame: CGRect(x: 100, y: 500, width: 100, height: 100))
+        otherProgressView?.progressColor = .blue
+        otherProgressView?.lineWidth = 1
+        view.addSubview(otherProgressView!)
+        
     }
     
     @objc private func sliderAction(slider: UISlider) {
-        progressView?.setProgress(value: CGFloat(slider.value), animated: false)
+        otherProgressView?.setProgress(value: CGFloat(slider.value), animated: false)
     }
     
     @objc private func buttonAction(button: UIButton) {
-        progressView?.setProgress(value: 0.5, animated: true)
+        otherProgressView?.setProgress(value: 0.5, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
