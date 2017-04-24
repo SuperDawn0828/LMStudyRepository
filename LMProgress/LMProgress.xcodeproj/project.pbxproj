@@ -15,6 +15,7 @@
 		1824B55C1EADA17200DB5782 /* LMProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B55B1EADA17200DB5782 /* LMProgressTests.swift */; };
 		1824B5671EADA17200DB5782 /* LMProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5661EADA17200DB5782 /* LMProgressUITests.swift */; };
 		1824B5751EADA1AA00DB5782 /* LMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5741EADA1AA00DB5782 /* LMProgressView.swift */; };
+		1824B5771EADD81400DB5782 /* LMOtherProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1824B5661EADA17200DB5782 /* LMProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMProgressUITests.swift; sourceTree = "<group>"; };
 		1824B5681EADA17200DB5782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1824B5741EADA1AA00DB5782 /* LMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProgressView.swift; sourceTree = "<group>"; };
+		1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMOtherProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1824B5461EADA17200DB5782 /* AppDelegate.swift */,
 				1824B5481EADA17200DB5782 /* ViewController.swift */,
 				1824B5741EADA1AA00DB5782 /* LMProgressView.swift */,
+				1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */,
 				1824B54A1EADA17200DB5782 /* Main.storyboard */,
 				1824B54D1EADA17200DB5782 /* Assets.xcassets */,
 				1824B54F1EADA17200DB5782 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				1824B5491EADA17200DB5782 /* ViewController.swift in Sources */,
 				1824B5751EADA1AA00DB5782 /* LMProgressView.swift in Sources */,
 				1824B5471EADA17200DB5782 /* AppDelegate.swift in Sources */,
+				1824B5771EADD81400DB5782 /* LMOtherProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +513,7 @@
 				1824B56D1EADA17200DB5782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1824B56E1EADA17200DB5782 /* Build configuration list for PBXNativeTarget "LMProgressTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				1824B5701EADA17200DB5782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1824B5711EADA17200DB5782 /* Build configuration list for PBXNativeTarget "LMProgressUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				1824B5731EADA17200DB5782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
