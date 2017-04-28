@@ -16,6 +16,7 @@
 		1824B5671EADA17200DB5782 /* LMProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5661EADA17200DB5782 /* LMProgressUITests.swift */; };
 		1824B5751EADA1AA00DB5782 /* LMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5741EADA1AA00DB5782 /* LMProgressView.swift */; };
 		1824B5771EADD81400DB5782 /* LMOtherProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */; };
+		1837B1BF1EB2EB02009DC1E0 /* LMWaveProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837B1BE1EB2EB02009DC1E0 /* LMWaveProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1824B5681EADA17200DB5782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1824B5741EADA1AA00DB5782 /* LMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProgressView.swift; sourceTree = "<group>"; };
 		1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMOtherProgressView.swift; sourceTree = "<group>"; };
+		1837B1BE1EB2EB02009DC1E0 /* LMWaveProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMWaveProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1824B5481EADA17200DB5782 /* ViewController.swift */,
 				1824B5741EADA1AA00DB5782 /* LMProgressView.swift */,
 				1824B5761EADD81400DB5782 /* LMOtherProgressView.swift */,
+				1837B1BE1EB2EB02009DC1E0 /* LMWaveProgressView.swift */,
 				1824B54A1EADA17200DB5782 /* Main.storyboard */,
 				1824B54D1EADA17200DB5782 /* Assets.xcassets */,
 				1824B54F1EADA17200DB5782 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 				TargetAttributes = {
 					1824B5421EADA17200DB5782 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = K93GK25J3C;
 						ProvisioningStyle = Automatic;
 					};
 					1824B5561EADA17200DB5782 = {
@@ -269,6 +273,7 @@
 				1824B5751EADA1AA00DB5782 /* LMProgressView.swift in Sources */,
 				1824B5471EADA17200DB5782 /* AppDelegate.swift in Sources */,
 				1824B5771EADD81400DB5782 /* LMOtherProgressView.swift in Sources */,
+				1837B1BF1EB2EB02009DC1E0 /* LMWaveProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +425,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K93GK25J3C;
 				INFOPLIST_FILE = LMProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,7 +439,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K93GK25J3C;
 				INFOPLIST_FILE = LMProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
