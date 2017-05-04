@@ -40,28 +40,46 @@ class ViewController: UIViewController {
         let certainAction = LMPopupAction("certain", .normal) { (index) in
             print(index)
         }
-//
-//        let threeAction = LMPopupAction("certain", .normal) { (index) in
-//            print(index)
-//        }
         
-//        let alertView = LMAlertView.init(title: "test", detail: "dkfjdlkfjlkasdjf", actions: [cancelAction])
-        let alertView = LMAlertView.init(title: "test", detail: "89879878797978979879879878978797879798797", placeholder: "kdljflkdjflkas", actions: [cancelAction, certainAction]) { (string) in
-            
+        let otherAction = LMPopupAction("other", .normal) { (index) in
+            print(index)
+        }
+
+        let alertView = LMAlertView.init(title: "谈到看到健康的健康", detail: "这是一个打底裤解放路大姐夫", placeholder: "看得见风科技的开发角度看", actions: [cancelAction, certainAction, otherAction]) { (string) in
+            print(string!)
         }
         alertView.show()
     }
     
     @objc private func buttonAction1(sender: UIButton) {
-        let bounds = UIScreen.main.bounds
-        let sheetView = LMSheetView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: 200))
-        sheetView.backgroundColor = .white
+
+        let oneAction = LMPopupAction.init("oneaction", .normal) { (index) in
+            print(index)
+        }
+        
+        let twoAction = LMPopupAction.init("twoaction", .normal) { (index) in
+            print(index)
+        }
+        
+        let threeAction = LMPopupAction.init("threeaction", .normal) { (index) in
+            
+        }
+        
+        let sheetView = LMSheetView.init(title: "测试代码", actions: [oneAction, twoAction, threeAction], cancelHandler: nil)
         sheetView.show()
     }
     
     @objc private func buttonAction2(sender: UIButton) {
-        let customView = LMCustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        customView.backgroundColor = .white
+        let cancelAction = LMPopupAction("cancel", .normal) { (index) in
+            print(index)
+        }
+        
+        let certainAction = LMPopupAction("certain", .normal) { (index) in
+            print(index)
+        }
+        
+        let customView = LMCustomView(title: "dfkdjfkdjfk", detail: "dkjfkdjfkdjk", actions: [cancelAction, certainAction])
+        
         customView.show()
     }
 
