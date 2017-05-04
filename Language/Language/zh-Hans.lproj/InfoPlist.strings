@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Language
+
+  Created by apple on 2017/5/4.
+  Copyright © 2017年 apple. All rights reserved.
+*/
+
+CFBundleDisplayName = "汉语";
