@@ -57,7 +57,7 @@ func UIColorFromRGB(_ value: Int) -> UIColor {
     return color
 }
 
-func StringOfSize(_ string: String, _ font: CGFloat, _ width: CGFloat) -> CGSize {
+func SizeOfString(_ string: String, _ font: CGFloat, _ width: CGFloat) -> CGSize {
     let text: NSString = string as NSString
     let rect = text.boundingRect(with: CGSize(width:width, height: CGFloat(MAXFLOAT)), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: font)], context: nil)
     return rect.size
@@ -83,12 +83,3 @@ func UIImageWithColor(_ color: UIColor) -> UIImage {
     
     return image
 }
-
-//func TruncateStringByCharLength(_ toString: String, _ charLength: Int) -> String {
-//    
-//}
-
-
-
-
-

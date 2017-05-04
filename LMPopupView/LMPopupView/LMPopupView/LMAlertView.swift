@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LMAlertView: LMPopupView {
+class LMAlertView: LMPopupView, UITextFieldDelegate {
     
     open var maxInputLength: Int = 15
     
@@ -68,7 +68,7 @@ class LMAlertView: LMPopupView {
             addSubview(titleLabel!)
             
             let titleWidth = width - 2 * config.innerMargin
-            let titleSize = StringOfSize(text, config.titleFontSize, titleWidth)
+            let titleSize = SizeOfString(text, config.titleFontSize, titleWidth)
             titleLabel?.frame = CGRect(x: config.innerMargin, y: config.innerMargin, width: titleWidth, height: titleSize.height)
             
             lastY += (config.innerMargin + titleSize.height)
@@ -85,15 +85,19 @@ class LMAlertView: LMPopupView {
             addSubview(detailLabel!)
             
             let detailWidth = width - 2 * config.innerMargin
-            let detailSize = StringOfSize(text, config.detailFontSize, detailWidth)
+            let detailSize = SizeOfString(text, config.detailFontSize, detailWidth)
             detailLabel?.frame = CGRect(x: config.innerMargin, y: lastY + config.innerMargin, width: detailWidth, height: detailSize.height)
             
             lastY += (config.innerMargin + detailSize.height)
         }
         
         if let _ = inputhandler {
+            inputHandler = inputhandler
+            
             inputTextField = UITextField()
             inputTextField?.textAlignment = .left
+            inputTextField?.returnKeyType = .done
+            inputTextField?.delegate = self
             inputTextField?.placeholder = placeholder
             inputTextField?.backgroundColor = config.backgroundColor
             inputTextField?.layer.borderWidth = config.splitWidth
@@ -114,7 +118,7 @@ class LMAlertView: LMPopupView {
         
         var buttonWidth: CGFloat = width
         var buttonX: CGFloat = 0.0
-        var buttonY: CGFloat = lastY
+        var buttonY: CGFloat = 0.0
         
         for (index, value) in actions.enumerated() {
             let button = UIButton()
@@ -133,17 +137,22 @@ class LMAlertView: LMPopupView {
             if actions.count == 2 {
                 buttonWidth = width / 2.0
                 buttonX += CGFloat(index) * buttonWidth
+                buttonY = lastY
                 
                 button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: config.buttonHeight)
-                lastY += CGFloat(index) * config.buttonHeight
             } else {
                 buttonWidth = width
                 buttonX = 0.0
-                buttonY += CGFloat(index) * config.buttonHeight
+                buttonY = lastY + CGFloat(index) * config.buttonHeight
                 
                 button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: config.buttonHeight)
-                lastY += config.buttonHeight
             }
+        }
+        
+        if actions.count == 2 {
+            lastY += config.buttonHeight
+        } else {
+            lastY += CGFloat(actions.count) * config.buttonHeight
         }
         
         let height = lastY
@@ -158,6 +167,14 @@ class LMAlertView: LMPopupView {
     
     override func hideKeyboard() {
         inputTextField?.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        hide()
+        inputHandler!(inputTextField?.text)
+        
+        return true
     }
     
     @objc private func actionButton(sender: UIButton) {
@@ -191,13 +208,11 @@ class LMAlertView: LMPopupView {
         }
         
         let toBeString = inputTextField?.text
-        let selectedRange = inputTextField?.markedTextRange
-        let position = inputTextField?.position(from: selectedRange!.start, offset: 0)
-        
-        if position != nil {
-            if toBeString!.characters.count > maxInputLength {
-                
-            }
+        if toBeString!.characters.count > maxInputLength {
+            let startIndex = toBeString?.index(toBeString!.startIndex, offsetBy: 0)
+            let endIndex =   toBeString?.index(toBeString!.startIndex, offsetBy: maxInputLength)
+            
+            inputTextField?.text = toBeString?[Range(startIndex! ..< endIndex!)]
         }
     }
     

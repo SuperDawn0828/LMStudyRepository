@@ -54,14 +54,12 @@ class LMAttachedView: UIView {
         let touch = (touches as NSSet).anyObject() as! UITouch
         let touchView = touch.view
         
-        if touchView is LMPopupView || !touchWildToHide{
-            return
-        }
-        
-        for view in subviews {
-            if view is LMPopupView {
-                let v = view as! LMPopupView
-                v.hide()
+        if touchView is LMAttachedView && touchWildToHide{
+            for view in subviews {
+                if view is LMPopupView {
+                    let v = view as! LMPopupView
+                    v.hide()
+                }
             }
         }
     }
