@@ -67,6 +67,8 @@ class LMSheetView: LMPopupView {
         lastY += config.innerMargin
         
         for (index, value) in actions.enumerated() {
+            let action = actions[index]
+            
             let button = UIButton()
             button.setBackgroundImage(UIImageWithColor(config.backgroundColor), for: .normal)
             button.setBackgroundImage(UIImageWithColor(config.backgroundColor), for: .disabled)
@@ -78,6 +80,7 @@ class LMSheetView: LMPopupView {
             button.layer.borderWidth = config.splitWidth
             button.layer.borderColor = config.splitColor.cgColor
             button.addTarget(self, action: #selector(actionButton(sender:)), for: .touchUpInside)
+            button.isEnabled = action.actionType == .disable ? false : true
             self.addSubview(button)
             
             

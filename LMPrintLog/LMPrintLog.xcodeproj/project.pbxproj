@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184B7DFB1EBC545000F47C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7DFA1EBC545000F47C26 /* AppDelegate.swift */; };
+		184B7DFD1EBC545000F47C26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7DFC1EBC545000F47C26 /* ViewController.swift */; };
+		184B7E001EBC545000F47C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7DFE1EBC545000F47C26 /* Main.storyboard */; };
+		184B7E021EBC545000F47C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B7E011EBC545000F47C26 /* Assets.xcassets */; };
+		184B7E051EBC545000F47C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7E031EBC545000F47C26 /* LaunchScreen.storyboard */; };
+		184B7E101EBC545000F47C26 /* LMPrintLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E0F1EBC545000F47C26 /* LMPrintLogTests.swift */; };
+		184B7E1B1EBC545000F47C26 /* LMPrintLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E1A1EBC545000F47C26 /* LMPrintLogUITests.swift */; };
+		184B7E291EBC546500F47C26 /* PrintLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E281EBC546500F47C26 /* PrintLog.swift */; };
+		184B7E2C1EBC671400F47C26 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E2B1EBC671400F47C26 /* BaseUrl.swift */; };
+		184B7E2E1EBC6DA500F47C26 /* RequestUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E2D1EBC6DA500F47C26 /* RequestUrl.swift */; };
+		184B7E301EBC777E00F47C26 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7E2F1EBC777E00F47C26 /* RequestManager.swift */; };
+		18E3C1681EBCA8A1001F8CB7 /* RequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3C1671EBCA8A1001F8CB7 /* RequestApi.swift */; };
+		18E3C1731EBCAEB4001F8CB7 /* NetworkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3C1721EBCAEB4001F8CB7 /* NetworkMessage.swift */; };
+		CC408D0016763F6D694376EE /* Pods_LMPrintLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13AD490529CC3708888E /* Pods_LMPrintLog.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184B7E0C1EBC545000F47C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184B7DEF1EBC545000F47C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184B7DF61EBC545000F47C26;
+			remoteInfo = LMPrintLog;
+		};
+		184B7E171EBC545000F47C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184B7DEF1EBC545000F47C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184B7DF61EBC545000F47C26;
+			remoteInfo = LMPrintLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042B214366CA885D68DC47BC /* Pods-LMPrintLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMPrintLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMPrintLog/Pods-LMPrintLog.debug.xcconfig"; sourceTree = "<group>"; };
+		184B7DF71EBC545000F47C26 /* LMPrintLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMPrintLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		184B7DFA1EBC545000F47C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		184B7DFC1EBC545000F47C26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		184B7DFF1EBC545000F47C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		184B7E011EBC545000F47C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		184B7E041EBC545000F47C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		184B7E061EBC545000F47C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184B7E0B1EBC545000F47C26 /* LMPrintLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMPrintLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		184B7E0F1EBC545000F47C26 /* LMPrintLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMPrintLogTests.swift; sourceTree = "<group>"; };
+		184B7E111EBC545000F47C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184B7E161EBC545000F47C26 /* LMPrintLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMPrintLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		184B7E1A1EBC545000F47C26 /* LMPrintLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMPrintLogUITests.swift; sourceTree = "<group>"; };
+		184B7E1C1EBC545000F47C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184B7E281EBC546500F47C26 /* PrintLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLog.swift; sourceTree = "<group>"; };
+		184B7E2B1EBC671400F47C26 /* BaseUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
+		184B7E2D1EBC6DA500F47C26 /* RequestUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUrl.swift; sourceTree = "<group>"; };
+		184B7E2F1EBC777E00F47C26 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		184B7E311EBC791700F47C26 /* LMPrintLog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMPrintLog-Bridging-Header.h"; sourceTree = "<group>"; };
+		18E3C1671EBCA8A1001F8CB7 /* RequestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestApi.swift; sourceTree = "<group>"; };
+		18E3C1721EBCAEB4001F8CB7 /* NetworkMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMessage.swift; sourceTree = "<group>"; };
+		526B13AD490529CC3708888E /* Pods_LMPrintLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMPrintLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD953AA92A9E2DA86DED5B4F /* Pods-LMPrintLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMPrintLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMPrintLog/Pods-LMPrintLog.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184B7DF41EBC545000F47C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC408D0016763F6D694376EE /* Pods_LMPrintLog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E081EBC545000F47C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E131EBC545000F47C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184B7DEE1EBC545000F47C26 = {
+			isa = PBXGroup;
+			children = (
+				184B7DF91EBC545000F47C26 /* LMPrintLog */,
+				184B7E0E1EBC545000F47C26 /* LMPrintLogTests */,
+				184B7E191EBC545000F47C26 /* LMPrintLogUITests */,
+				184B7DF81EBC545000F47C26 /* Products */,
+				435F426FC4EAD76F5C26E53A /* Pods */,
+				BDC2E96439EEC68CAB8EFA3D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		184B7DF81EBC545000F47C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184B7DF71EBC545000F47C26 /* LMPrintLog.app */,
+				184B7E0B1EBC545000F47C26 /* LMPrintLogTests.xctest */,
+				184B7E161EBC545000F47C26 /* LMPrintLogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184B7DF91EBC545000F47C26 /* LMPrintLog */ = {
+			isa = PBXGroup;
+			children = (
+				184B7DFA1EBC545000F47C26 /* AppDelegate.swift */,
+				184B7DFC1EBC545000F47C26 /* ViewController.swift */,
+				184B7E281EBC546500F47C26 /* PrintLog.swift */,
+				184B7E311EBC791700F47C26 /* LMPrintLog-Bridging-Header.h */,
+				184B7E2A1EBC670200F47C26 /* RequestManager */,
+				184B7DFE1EBC545000F47C26 /* Main.storyboard */,
+				184B7E011EBC545000F47C26 /* Assets.xcassets */,
+				184B7E031EBC545000F47C26 /* LaunchScreen.storyboard */,
+				184B7E061EBC545000F47C26 /* Info.plist */,
+			);
+			path = LMPrintLog;
+			sourceTree = "<group>";
+		};
+		184B7E0E1EBC545000F47C26 /* LMPrintLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				184B7E0F1EBC545000F47C26 /* LMPrintLogTests.swift */,
+				184B7E111EBC545000F47C26 /* Info.plist */,
+			);
+			path = LMPrintLogTests;
+			sourceTree = "<group>";
+		};
+		184B7E191EBC545000F47C26 /* LMPrintLogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				184B7E1A1EBC545000F47C26 /* LMPrintLogUITests.swift */,
+				184B7E1C1EBC545000F47C26 /* Info.plist */,
+			);
+			path = LMPrintLogUITests;
+			sourceTree = "<group>";
+		};
+		184B7E2A1EBC670200F47C26 /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				184B7E2B1EBC671400F47C26 /* BaseUrl.swift */,
+				184B7E2D1EBC6DA500F47C26 /* RequestUrl.swift */,
+				18E3C1671EBCA8A1001F8CB7 /* RequestApi.swift */,
+				184B7E2F1EBC777E00F47C26 /* RequestManager.swift */,
+				18E3C1721EBCAEB4001F8CB7 /* NetworkMessage.swift */,
+			);
+			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		435F426FC4EAD76F5C26E53A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				042B214366CA885D68DC47BC /* Pods-LMPrintLog.debug.xcconfig */,
+				CD953AA92A9E2DA86DED5B4F /* Pods-LMPrintLog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDC2E96439EEC68CAB8EFA3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526B13AD490529CC3708888E /* Pods_LMPrintLog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		184B7DF61EBC545000F47C26 /* LMPrintLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184B7E1F1EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLog" */;
+			buildPhases = (
+				1D7572A8B6333BA8458C0AE6 /* [CP] Check Pods Manifest.lock */,
+				184B7DF31EBC545000F47C26 /* Sources */,
+				184B7DF41EBC545000F47C26 /* Frameworks */,
+				184B7DF51EBC545000F47C26 /* Resources */,
+				D058D5E12264E060E2FBACBB /* [CP] Embed Pods Frameworks */,
+				46177CA515D19A91D2C0743B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMPrintLog;
+			productName = LMPrintLog;
+			productReference = 184B7DF71EBC545000F47C26 /* LMPrintLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		184B7E0A1EBC545000F47C26 /* LMPrintLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184B7E221EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLogTests" */;
+			buildPhases = (
+				184B7E071EBC545000F47C26 /* Sources */,
+				184B7E081EBC545000F47C26 /* Frameworks */,
+				184B7E091EBC545000F47C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184B7E0D1EBC545000F47C26 /* PBXTargetDependency */,
+			);
+			name = LMPrintLogTests;
+			productName = LMPrintLogTests;
+			productReference = 184B7E0B1EBC545000F47C26 /* LMPrintLogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		184B7E151EBC545000F47C26 /* LMPrintLogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184B7E251EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLogUITests" */;
+			buildPhases = (
+				184B7E121EBC545000F47C26 /* Sources */,
+				184B7E131EBC545000F47C26 /* Frameworks */,
+				184B7E141EBC545000F47C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184B7E181EBC545000F47C26 /* PBXTargetDependency */,
+			);
+			name = LMPrintLogUITests;
+			productName = LMPrintLogUITests;
+			productReference = 184B7E161EBC545000F47C26 /* LMPrintLogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184B7DEF1EBC545000F47C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					184B7DF61EBC545000F47C26 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					184B7E0A1EBC545000F47C26 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 184B7DF61EBC545000F47C26;
+					};
+					184B7E151EBC545000F47C26 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 184B7DF61EBC545000F47C26;
+					};
+				};
+			};
+			buildConfigurationList = 184B7DF21EBC545000F47C26 /* Build configuration list for PBXProject "LMPrintLog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 184B7DEE1EBC545000F47C26;
+			productRefGroup = 184B7DF81EBC545000F47C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184B7DF61EBC545000F47C26 /* LMPrintLog */,
+				184B7E0A1EBC545000F47C26 /* LMPrintLogTests */,
+				184B7E151EBC545000F47C26 /* LMPrintLogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		184B7DF51EBC545000F47C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184B7E051EBC545000F47C26 /* LaunchScreen.storyboard in Resources */,
+				184B7E021EBC545000F47C26 /* Assets.xcassets in Resources */,
+				184B7E001EBC545000F47C26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E091EBC545000F47C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E141EBC545000F47C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D7572A8B6333BA8458C0AE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46177CA515D19A91D2C0743B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMPrintLog/Pods-LMPrintLog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D058D5E12264E060E2FBACBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMPrintLog/Pods-LMPrintLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184B7DF31EBC545000F47C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E3C1681EBCA8A1001F8CB7 /* RequestApi.swift in Sources */,
+				184B7DFD1EBC545000F47C26 /* ViewController.swift in Sources */,
+				184B7E2E1EBC6DA500F47C26 /* RequestUrl.swift in Sources */,
+				184B7E291EBC546500F47C26 /* PrintLog.swift in Sources */,
+				184B7E301EBC777E00F47C26 /* RequestManager.swift in Sources */,
+				184B7E2C1EBC671400F47C26 /* BaseUrl.swift in Sources */,
+				18E3C1731EBCAEB4001F8CB7 /* NetworkMessage.swift in Sources */,
+				184B7DFB1EBC545000F47C26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E071EBC545000F47C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184B7E101EBC545000F47C26 /* LMPrintLogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184B7E121EBC545000F47C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184B7E1B1EBC545000F47C26 /* LMPrintLogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184B7E0D1EBC545000F47C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184B7DF61EBC545000F47C26 /* LMPrintLog */;
+			targetProxy = 184B7E0C1EBC545000F47C26 /* PBXContainerItemProxy */;
+		};
+		184B7E181EBC545000F47C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184B7DF61EBC545000F47C26 /* LMPrintLog */;
+			targetProxy = 184B7E171EBC545000F47C26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		184B7DFE1EBC545000F47C26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184B7DFF1EBC545000F47C26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		184B7E031EBC545000F47C26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184B7E041EBC545000F47C26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		184B7E1D1EBC545000F47C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		184B7E1E1EBC545000F47C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		184B7E201EBC545000F47C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042B214366CA885D68DC47BC /* Pods-LMPrintLog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LMPrintLog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LMPrintLog/LMPrintLog-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		184B7E211EBC545000F47C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD953AA92A9E2DA86DED5B4F /* Pods-LMPrintLog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LMPrintLog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LMPrintLog/LMPrintLog-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		184B7E231EBC545000F47C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LMPrintLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LMPrintLog.app/LMPrintLog";
+			};
+			name = Debug;
+		};
+		184B7E241EBC545000F47C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LMPrintLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LMPrintLog.app/LMPrintLog";
+			};
+			name = Release;
+		};
+		184B7E261EBC545000F47C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LMPrintLogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LMPrintLog;
+			};
+			name = Debug;
+		};
+		184B7E271EBC545000F47C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LMPrintLogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = one.com.LMPrintLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LMPrintLog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184B7DF21EBC545000F47C26 /* Build configuration list for PBXProject "LMPrintLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184B7E1D1EBC545000F47C26 /* Debug */,
+				184B7E1E1EBC545000F47C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184B7E1F1EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184B7E201EBC545000F47C26 /* Debug */,
+				184B7E211EBC545000F47C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184B7E221EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184B7E231EBC545000F47C26 /* Debug */,
+				184B7E241EBC545000F47C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184B7E251EBC545000F47C26 /* Build configuration list for PBXNativeTarget "LMPrintLogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184B7E261EBC545000F47C26 /* Debug */,
+				184B7E271EBC545000F47C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184B7DEF1EBC545000F47C26 /* Project object */;
+}
