@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="IOSDateWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC0-0R-STx">
+                                <rect key="frame" x="20" y="20" width="200" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.37727369917637299" blue="0.37964393287637466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEN-1c-E2v">
+                                <rect key="frame" x="240" y="20" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Cps-Wk-yLM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.37727369919999998" blue="0.37964393289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzS-tQ-GPb">
+                                <rect key="frame" x="20" y="55" width="200" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.37727369919999998" blue="0.37964393289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1g-f3-J2f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <connections>
+                                    <action selector="clickButtonAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="jCV-fc-hj9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VEN-1c-E2v" secondAttribute="trailing" constant="20" id="2fm-VW-1WC"/>
+                            <constraint firstItem="PC0-0R-STx" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="5hP-fh-hGC"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="VEN-1c-E2v" secondAttribute="bottom" constant="20" id="BCH-iX-VMA"/>
+                            <constraint firstItem="VEN-1c-E2v" firstAttribute="leading" secondItem="PC0-0R-STx" secondAttribute="trailing" constant="20" id="KZH-bt-mBZ"/>
+                            <constraint firstItem="uzS-tQ-GPb" firstAttribute="top" secondItem="PC0-0R-STx" secondAttribute="bottom" constant="10" id="MQ8-5H-dfs"/>
+                            <constraint firstItem="VEN-1c-E2v" firstAttribute="leading" secondItem="uzS-tQ-GPb" secondAttribute="trailing" constant="20" id="PVf-Ym-Ctc"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="V1g-f3-J2f" secondAttribute="bottom" id="SQd-mw-q7M"/>
+                            <constraint firstItem="uzS-tQ-GPb" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="Sn1-47-ZMv"/>
+                            <constraint firstItem="VEN-1c-E2v" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="20" id="Vpe-qn-VL7"/>
+                            <constraint firstItem="V1g-f3-J2f" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="byG-kd-rVK"/>
+                            <constraint firstItem="V1g-f3-J2f" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="dvk-l6-Zqe"/>
+                            <constraint firstItem="PC0-0R-STx" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="20" id="okz-dt-iqK"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="uzS-tQ-GPb" secondAttribute="bottom" constant="20" id="tLZ-cW-I2C"/>
+                            <constraint firstAttribute="trailing" secondItem="V1g-f3-J2f" secondAttribute="trailing" id="vMc-lR-7MA"/>
+                            <constraint firstItem="uzS-tQ-GPb" firstAttribute="height" secondItem="PC0-0R-STx" secondAttribute="height" id="wwP-Gg-jeX"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="clickButton" destination="V1g-f3-J2f" id="CvN-9q-jNe"/>
+                        <outlet property="dateLabel" destination="PC0-0R-STx" id="MrU-HJ-plK"/>
+                        <outlet property="timeLabel" destination="uzS-tQ-GPb" id="vgW-if-gtx"/>
+                        <outlet property="weekLabel" destination="VEN-1c-E2v" id="xdi-an-7rI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.59999999999999" y="16.191904047976013"/>
+        </scene>
+    </scenes>
+</document>
