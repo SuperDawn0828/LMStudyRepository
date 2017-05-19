@@ -214,13 +214,6 @@ class LMImagePickerViewController: UIViewController, UICollectionViewDelegate, U
             return true
         }
     }
-    
-    func albumSelectedShowAlert(_ number: Int) {
-        let alertView = UIAlertController(title: nil, message: "最多可选择\(number)张图片", preferredStyle: .alert)
-        let certainAction = UIAlertAction(title: "确定", style: .default, handler: nil)
-        alertView.addAction(certainAction)
-        present(alertView, animated: true, completion: nil)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
