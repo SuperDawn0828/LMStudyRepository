@@ -69,7 +69,7 @@ func showQuickTips(title: String) {
         }
         hud.showInView(view: window)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: { 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             hud.dismiss()
         })
     }
@@ -80,7 +80,7 @@ func showQuickTips(title: String, inView: UIView) {
         let hud = LMHud(title: title)
         hud.showInView(view: inView)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: { 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             hud.dismiss()
         })
     }

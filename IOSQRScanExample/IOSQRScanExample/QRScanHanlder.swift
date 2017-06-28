@@ -9,15 +9,15 @@
 import UIKit
 import AVFoundation
 
-protocol QRScanManagerDelegate: NSObjectProtocol {
-    func qrScanManager(_ manager: QRScanManager, completedScanningWithOutput output: String?)
+protocol QRScanHanlderDelegate: NSObjectProtocol {
+    func qrScanManager(_ manager: QRScanHanlder, completedScanningWithOutput output: String?)
 }
 
-class QRScanManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+class QRScanHanlder: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     private var captureDevice: AVCaptureDevice?
     private var session: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer?
-    weak var delegate: QRScanManagerDelegate?
+    weak var delegate: QRScanHanlderDelegate?
     
     init(_ layer: CALayer) {
         super.init()
@@ -25,7 +25,7 @@ class QRScanManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
         let input = try? AVCaptureDeviceInput(device: captureDevice)
         let output = AVCaptureMetadataOutput()
         
-        let queue = DispatchQueue.init(label: "com.qrScan.queue")
+        let queue = DispatchQueue(label: "com.qrScan.queue")
         output.setMetadataObjectsDelegate(self, queue: queue)
         output.rectOfInterest = CGRect(x: 0.05, y: 0.2, width: 0.7, height: 0.6)
         

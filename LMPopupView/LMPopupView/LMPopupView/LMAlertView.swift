@@ -53,6 +53,7 @@ class LMAlertView: LMPopupView, UITextFieldDelegate {
         layer.masksToBounds = true
         layer.borderWidth = config.splitWidth
         layer.borderColor = config.splitColor.cgColor
+        layer.shadowRadius = config.cornerRadius
         
         let width = config.width
         var lastY: CGFloat = 0.0
