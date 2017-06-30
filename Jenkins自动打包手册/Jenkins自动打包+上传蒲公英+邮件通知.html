@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Jenkins自动打包+上传蒲公英+邮件通知</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Jenkins实现自动打包上传蒲公英及邮件通知手册</h1>
+
+<h2 id="toc_1">前言</h2>
+
+<ul>
+<li>首先进入苹果开发者中心，先申请好项目，并将开发(Development)证书和描述文件、发布(Distribution)证书和描述文件申请好，如果是内测需要，则在申请发布证书描述文件时候选择ad_hoc。同时将开发证书下载下来并放到keychains当中，同时将distribution及profile文件下载下来，后续需要使用
+<strong>证书非常重要，如果配置或者下载不正确会导致后续各种错误</strong>
+<img src="1.png" alt="证书"></li>
+</ul>
+
+<h2 id="toc_2">实现步骤</h2>
+
+<ol>
+<li>下载安装Jenkins的MAC版本，下载地址：官网 https://jenkins.io/ ，本手册Jenkins版本为2.46.3，下载完成后进行安装（安装过程略），本手册Xcode版本为8.3.2</li>
+<li>安装完成之后，Safari可能会自动打开，如果没有自动打开，打开浏览器，输入http://localhost:8080，如果打开报错，请重新安装Java环境</li>
+<li>如果页面打开成功，按照页面给出的提示路径找到/Users/Shared/Jenkins/Home/secrets下的initialAdminPassword文件，复制密码，填入到网页当中。如果不是Jenkins用户进入如下该目录，可能会出现没有权限打开文件，请自行修改该文件的读写权限后再拷贝填入
+<img src="2.png" alt="jenkins"></li>
+<li>选择install suggested plugins，安装建议的插件，然后直到重新设置admin user界面，填入用户名及密码等
+<img src="3.png" alt="jenkins"></li>
+<li>登录localhost:8080 ，选择“系统管理”——“管理插件”，我们要先安装一些辅助插件。
+
+<ul>
+<li>安装GitLab插件：因为我们用的是GitLab来管理源代码，Jenkins本身并没有自带GitLab插件，所以我们需要依次选择 系统管理-&gt;管理插件，在“可选插件”中选中“GitLab Plugin”和“Gitlab Hook Plugin”这两项，然后安装。</li>
+<li>安装Xcode插件：同安装GitLab插件的步骤一样，我们依次选择系统管理-&gt;管理插件，在“可选插件”中选中“Xcode integration”安装。</li>
+</ul></li>
+<li>安装完插件后，创建一个新任务，填入item名，选择“构建一个自由风格的软件项目”，
+填入项目名称(自定义)，具体如下图，可选填保持构建的天数，即你构建的项目保持的天数，保持构建的最大数即最多可保持的构建个数
+<img src="4.png" alt="jenkins"></li>
+<li><p>如果需要用到gitLab作为源码管理，需要先配置SSH Key，在Jenkins的证书管理中添加SSH。获取SSH如下：</p>
+
+<ul>
+<li>进入Jenkins用户下：sudo su jenkins，如果没有会创建该用户,按照提示一步步设置该用户密码等即可</li>
+<li>生成ssh Key，通过如下命令生成：ssh-keygen -t rsa -C “xxx@mobilereality.org”,其中“xxx@mobilereality.org”为你gitlab账户</li>
+<li>将公钥(~/.ssh/id<em>rsa.pub)内容拷贝到gitlab-profile setting的SSH KEYS字段(可以使用cat ~/.ssh/id</em>rsa.pub命令显示文件内容然后再拷贝出来)，进入到gitlab当中的Profile settings进入ssh keys，填入刚刚的公钥
+<img src="5.png" alt="公钥"></li>
+<li>id_rsa这个文件内容为私钥，按照第三步同样拷贝出来。在Jenkins管理页面，选择“Credentials”，然后选择“Global credentials (unrestricted)”，点击“Add Credentials”，如下图所示，我们填写自己的SSH信息，然后点击“Save”，这样就把SSH添加到Jenkins的全局域中去了，此处填写的是私钥。
+<img src="6.png" alt="私钥"></li>
+</ul></li>
+<li><p>源码管理配置，如果密钥配置成功的话，在填入Repository URL与选择Credentials后，界面会如下，不会产生错误或者警告：
+<img src="7.png" alt="7"></p></li>
+<li><p>构建触发器： H 10 * * *的意思是每天10点进行编译一次源码，Poll SCM：定时检查源码变更（根据SCM软件的版本号），如果有更新就checkout最新code下来，然后执行构建动作，这里设置为每5分钟检查一次
+<img src="8.png" alt="8"></p></li>
+<li><p>在构建环境之前，首先确保你的证书是有效，需要archive出来的包的相关证书也是与工程相匹配的，否则会出现错误。将 /Users/自己的用户名/Library 文件夹下的 Keychains 和 MobileDevice 复制到 /Users/Shared/Jenkins/Library 文件夹下.(可通过前往文件夹  ~/Library)，如果MobileDevice不存在对应项目的distribution及profile，则需要手动从开发者中心下载下来，并拷贝进去。
+<img src="9.png" alt="9"></p></li>
+<li><p>构建环境设置，首先再次添加插件，如之前步骤添加插件：“Keychains and Code Signing Identities”和“Mobile Provisioning Profiles”。完成后，在系统管理页面，选择“Keychains and Provisioning Profiles Management”。然后开始上传login.keychain 和 对用工程的描述文件（在mobileDevice当中）.</p>
+
+<ul>
+<li><strong>注意：高版本Mac系统，默认为login.keychain-db，插件默认不能上传login.keychain-db, 直接重命名为 login.keychain,点击上传.上传结束后进入/Users/Shared/Jenkins/Library/Keychains 目录下,双击运行 login.keychain, 自动变成 login.keychain-db,如果没有双击运行,后续可能访问开发者证书报错)</strong>
+<img src="10.png" alt="10"></li>
+<li>Code Signing Identity中的内容需要拷贝钥匙串当中相关内容，如下图，拷贝iPhone Distribution.....等填入Code Signing Identity
+<img src="11.png" alt="11"></li>
+<li>其中Keychains-&gt;Filename中内容在login.chain上传成功后会自动填入，Provisioning Profiles中的内容在profile上传成功后会自动填写.
+Keychains-&gt;Password为loginchain设置的密码
+上传完成以后会出现类似如下界面，
+<img src="12.png" alt="12"></li>
+<li>配置环境：如下图选择对应即可，不可选择的按照图中一样填写
+<img src="13.png" alt="13"></li>
+</ul></li>
+<li><p>构建设置：</p>
+
+<ul>
+<li>首先在Jenkins首页进入系统管理-&gt;系统设置，添加Apple Development Teams，以为后续步骤做备用。Team name和DevelopmentID在苹果开发者账户当中可以找到（只添加红色框标注的地方）
+<img src="14.png" alt="14"></li>
+<li>target为工程名，需要与对应项目的target一致，configuration表示配置的版本，如果需要导出debug版本则对应进行设置即可
+<img src="15.png" alt="15"></li>
+<li>ad-hoc表示为内测使用，根据自己生成的证书及选择来进行配置，.ipa filename pattern表示输出的.ipa的名称，Output directory表示输出的.ipa存放位置
+<img src="16.png" alt="16"><br></li>
+<li>Development Team表示选择开发团队，Keychain path按照如图填写， Keychain password为你设置的keychain密码，未单独设置为你的开机密码
+<img src="17.png" alt="17"></li>
+<li>jenkins会在它的目录Home-&gt;workspace下建一个文件夹，这个文件夹名字就是你的项目名字（比如你的项目名字叫JenkinsProj，那么会存在Jenkins-&gt;Home-&gt;workspace-&gt;JenkinsProj这个文件夹）。${WORKSPACE}一般都会到Jenkins创建的文件夹下。如果使用了cocoaPods，则需要按照正确的工程文件名及路径填写，具体如下图，涉及到工程文件后缀不需要填写，否则构建时会报找不到对应工程文件。
+如果找不到Xcode Schema File,可以先在终端进入工程对应目录下，通过xcodebuild -list命令，你就会得到你的schema列表，找到对应的schema即可。如下图
+<img src="18.png" alt="18">
+<img src="19.png" alt="19"></li>
+</ul></li>
+<li><p>Xcode 设置：</p>
+
+<ul>
+<li>打开工程项目，手动选择证书配置，取消自动选择，选择的描述文件与Jenkins上的设置需要一致：
+<img src="21.png" alt="21"></li>
+<li>scheme错误时将scheme选择shared，打开Xcode-&gt;manageSchema，把share勾上
+<img src="22.png" alt="22"></li>
+</ul></li>
+<li><p>运行脚本，将打包好的.ipa文件自动上传到蒲公英
+在构建中增加Execute shell，在command中增加如下命令，@${WORKSPACE}/build/Release-iphoneos/${IPANAME}为最终你打包成功后的文件路径，：
+IPANAME=&quot;XY<em>JenkinsTest.ipa&quot;
+curl -F &quot;file=@${WORKSPACE}/build/Release-iphoneos/${IPANAME}&quot; -F &quot;uKey=你的蒲公英uKEy&quot; -F &quot;</em>api<em>key=你的蒲公英</em>api_key&quot; https://qiniu-storage.pgyer.com/apiv1/app/upload
+cd ${WORKSPACE}/apipRobject/XYSendEmail/
+python3 sendEmailToTesters.py</p>
+
+<ul>
+<li>注意事项：邮件发送执行的是python脚本，本脚本python版本要求最低为3.6，如果没有安装python请从python官网下载安装，然后请将python脚本拷贝到你的项目的工程目录下，并同步到git
+<img src="20.png" alt="20"></li>
+</ul></li>
+</ol>
+
+<h2 id="toc_3">可能出现的错误解决方案</h2>
+
+<ol>
+<li>如果出现不能够识别python命令而又确定安装了python，可以尝试按照如下方式配置Jenkins的环境变量：
+
+<ul>
+<li>打开Jenkins—&gt;系统管理—&gt;系统设置—&gt;全局属性—&gt;Environment variables,因为python安装如果是在电脑admin情况下，Jenkins用户中需要添加环境变量，否则会有可能报错找不到命令。</li>
+<li>首先在电脑管理员用户情况下执行如下命令：echo $PATH，将展现的内容拷贝，然后粘贴到如下键值对列表栏中，你可以看到python相关内容在其中
+<img src="23.png" alt="23"></li>
+<li>如果命令识别成功后出现找不到requests模块，请在终端使用pip3 install requests安装该模块</li>
+</ul></li>
+<li>如果用户下载不了可以考虑这两个问题：
+
+<ul>
+<li>用户的手机iOS系统版本是否低于你APP支持的最低版本</li>
+<li>用户手机的UUID是否添加到你的证书当中。如果要某台设备可以安装，则必须要将这台设备的 UDID 添加到导出安装包时所用的证书文件中（. mobileprovision文件），才可以在这台设备上安装</li>
+</ul></li>
+</ol>
+
+
+
+
+</body>
+
+</html>

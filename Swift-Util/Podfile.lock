@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMapFoundation (1.4.0)
+  - AMapLocation (2.4.0):
+    - AMapFoundation (~> 1.4)
+  - AMapSearch (5.2.1):
+    - AMapFoundation (~> 1.2)
+  - BaiduMapKit (3.0.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - UMengUShare/Core (6.4.4):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.4)
+  - UMengUShare/Social/ReducedQQ (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.4):
+    - UMengUShare/Core
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AMapLocation
+  - AMapSearch
+  - BaiduMapKit (~> 3.0.0)
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
+  - SDWebImage (~> 3.8.2)
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/ReducedWeChat
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
+  AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
+  AMapSearch: 4979b98adf56ed4dabe735435ed78d759ba0c21f
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  UMengUShare: cd54ae52958426b79aa9193a7b02058d6a6d9aa0
+
+PODFILE CHECKSUM: ce0a56f735de42e0bc3786aeb1fef132b69e64ce
+
+COCOAPODS: 1.2.0.beta.1
