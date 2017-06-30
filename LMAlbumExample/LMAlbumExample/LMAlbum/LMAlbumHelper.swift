@@ -51,20 +51,11 @@ func getPhotoAssets(_ fetchResult: PHFetchResult<PHAsset>) -> [PHAsset] {
 //从asset中取出图片
 func getImage(by asset: PHAsset, complectionImage imageSize: CGSize?, complection: @escaping (UIImage?) -> ()) {
     
-    
-    
-    var size = CGSize(width: 0, height: 0)
-    if let _ = imageSize {
-        size = CGSize(width: imageSize!.width, height: imageSize!.height)
+    var size: CGSize
+    if imageSize == nil {
+        size = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
     } else {
-        let photoWidth = UIScreen.main.bounds.width
-        let scale = UIScreen.main.scale
-        let aspectRatio = CGFloat(asset.pixelHeight) / CGFloat(asset.pixelWidth)
-        
-        let pixelWidth = photoWidth * scale
-        let pixelHeight = aspectRatio * photoWidth * scale
-        
-        size = CGSize(width: pixelWidth, height: pixelHeight)
+        size = imageSize!
     }
     
     let option = PHImageRequestOptions()
@@ -96,8 +87,6 @@ func getAlbumAuthorization(_ result: @escaping () -> ()){
                 }
             }
         })
-    } else if status == PHAuthorizationStatus.authorized {
-        result()
     } else {
         
     }

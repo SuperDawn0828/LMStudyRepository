@@ -16,7 +16,7 @@
 		E22E39431EC9E96A001001A8 /* IOSQRScanExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E39421EC9E96A001001A8 /* IOSQRScanExampleUITests.swift */; };
 		E22E39511EC9EA20001001A8 /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E39501EC9EA20001001A8 /* QRScanViewController.swift */; };
 		E22E39531EC9EDF0001001A8 /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E39521EC9EDF0001001A8 /* QRScanView.swift */; };
-		E2DFF3C31EC9FDA800396F0B /* QRScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DFF3C21EC9FDA800396F0B /* QRScanManager.swift */; };
+		E2DFF3C31EC9FDA800396F0B /* QRScanHanlder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DFF3C21EC9FDA800396F0B /* QRScanHanlder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		E22E39441EC9E96A001001A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22E39501EC9EA20001001A8 /* QRScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
 		E22E39521EC9EDF0001001A8 /* QRScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
-		E2DFF3C21EC9FDA800396F0B /* QRScanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanManager.swift; sourceTree = "<group>"; };
+		E2DFF3C21EC9FDA800396F0B /* QRScanHanlder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanHanlder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				E22E39501EC9EA20001001A8 /* QRScanViewController.swift */,
 				E2292C1F1ECAA96900B05BE0 /* QRHandleViewController.swift */,
 				E22E39521EC9EDF0001001A8 /* QRScanView.swift */,
-				E2DFF3C21EC9FDA800396F0B /* QRScanManager.swift */,
+				E2DFF3C21EC9FDA800396F0B /* QRScanHanlder.swift */,
 				E22E39291EC9E96A001001A8 /* Assets.xcassets */,
 				E22E392B1EC9E96A001001A8 /* LaunchScreen.storyboard */,
 				E22E392E1EC9E96A001001A8 /* Info.plist */,
@@ -202,7 +202,7 @@
 				TargetAttributes = {
 					E22E391E1EC9E96A001001A8 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = N29F56APGX;
+						DevelopmentTeam = K93GK25J3C;
 						ProvisioningStyle = Automatic;
 					};
 					E22E39321EC9E96A001001A8 = {
@@ -273,7 +273,7 @@
 				E22E39251EC9E96A001001A8 /* ViewController.swift in Sources */,
 				E22E39531EC9EDF0001001A8 /* QRScanView.swift in Sources */,
 				E22E39231EC9E96A001001A8 /* AppDelegate.swift in Sources */,
-				E2DFF3C31EC9FDA800396F0B /* QRScanManager.swift in Sources */,
+				E2DFF3C31EC9FDA800396F0B /* QRScanHanlder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +417,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N29F56APGX;
+				DEVELOPMENT_TEAM = K93GK25J3C;
 				INFOPLIST_FILE = IOSQRScanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.noneIdentifier.IOSQRScanExample01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noneIdentifier.IOSQRScanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,10 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N29F56APGX;
+				DEVELOPMENT_TEAM = K93GK25J3C;
 				INFOPLIST_FILE = IOSQRScanExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.noneIdentifier.IOSQRScanExample01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noneIdentifier.IOSQRScanExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

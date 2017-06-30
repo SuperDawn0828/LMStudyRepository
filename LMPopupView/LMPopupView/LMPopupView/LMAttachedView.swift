@@ -27,7 +27,7 @@ class LMAttachedView: UIView {
         backgroundColor = .clear
         
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: { 
-            self.backgroundColor = UIColor(white: 0, alpha: 0.6)
+//            self.backgroundColor = UIColor(white: 0, alpha: 0.6)
         }) { (finish) in
             
         }

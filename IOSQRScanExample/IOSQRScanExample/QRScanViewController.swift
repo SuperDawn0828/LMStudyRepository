@@ -8,9 +8,9 @@
 
 import UIKit
 
-class QRScanViewController: UIViewController, QRScanManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class QRScanViewController: UIViewController, QRScanHanlderDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    private var qrScanManager: QRScanManager?
+    private var qrScanManager: QRScanHanlder?
     
     private var qrScanView: QRScanView?
 
@@ -53,7 +53,7 @@ class QRScanViewController: UIViewController, QRScanManagerDelegate, UIImagePick
     }
     
     private func setupScanManager() {
-        qrScanManager = QRScanManager(view.layer)
+        qrScanManager = QRScanHanlder(view.layer)
         qrScanManager?.delegate = self
     }
     
@@ -89,7 +89,7 @@ class QRScanViewController: UIViewController, QRScanManagerDelegate, UIImagePick
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func qrScanManager(_ manager: QRScanManager, completedScanningWithOutput output: String?) {
+    func qrScanManager(_ manager: QRScanHanlder, completedScanningWithOutput output: String?) {
         DispatchQueue.main.async {
             self.gotoQRHandle(output)
         }
