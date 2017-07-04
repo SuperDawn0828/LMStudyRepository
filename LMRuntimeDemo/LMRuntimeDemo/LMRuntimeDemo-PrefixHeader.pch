@@ -1,0 +1,15 @@
+//
+//  LMRuntimeDemo-PrefixHeader.pch
+//  LMRuntimeDemo
+//
+//  Created by 黎明 on 2017/7/3.
+//  Copyright © 2017年 黎明. All rights reserved.
+//
+
+#ifndef LMRuntimeDemo_PrefixHeader_pch
+#define LMRuntimeDemo_PrefixHeader_pch
+
+#import "SwapMethod.h"
+#import "UIViewController+Swap.h"
+
+#endif /* LMRuntimeDemo_PrefixHeader_pch */
