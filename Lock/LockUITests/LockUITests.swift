@@ -1,14 +1,14 @@
 //
-//  GCDDemoUITests.swift
-//  GCDDemoUITests
+//  LockUITests.swift
+//  LockUITests
 //
-//  Created by 黎明 on 2017/7/20.
+//  Created by 黎明 on 2017/7/26.
 //  Copyright © 2017年 黎明. All rights reserved.
 //
 
 import XCTest
 
-class GCDDemoUITests: XCTestCase {
+class LockUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
