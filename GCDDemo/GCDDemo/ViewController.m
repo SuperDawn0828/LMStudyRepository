@@ -21,38 +21,70 @@
 
 - (IBAction)asyncConcurrent:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.gcddemo.asyncconcurrent", DISPATCH_QUEUE_CONCURRENT);
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_async(queue, ^{
-            NSLog(@"asyncIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
 }
 
 - (IBAction)syncConcurrent:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.gcddemo.syncconcurrent", DISPATCH_QUEUE_CONCURRENT);
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_sync(queue, ^{
-            NSLog(@"syncIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+    
+    dispatch_sync(queue, ^{
+            for (int index = 0; index < 5; index ++) {
+            NSLog(@"syncIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    dispatch_sync(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"syncIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
 }
 
 - (IBAction)asyncSerail:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.gdcdemo.asyncserail", DISPATCH_QUEUE_SERIAL);
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_async(queue, ^{
-            NSLog(@"asyncserialIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+    
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncserialIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncserialIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
 }
 
 - (IBAction)syncSerail:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.gcddemo.syncserail", DISPATCH_QUEUE_SERIAL);
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_sync(queue, ^{
-            NSLog(@"syncserialIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+    
+    dispatch_sync(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"syncserialIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    dispatch_sync(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"syncserialIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
 }
 
 - (IBAction)asyncGloab:(UIButton *)sender {
@@ -75,20 +107,34 @@
 
 - (IBAction)asyncMain:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_get_main_queue();
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_async(queue, ^{
-            NSLog(@"asyncMianIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+    
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncMianIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    dispatch_async(queue, ^{
+        for (int index = 0; index < 5; index ++) {
+            NSLog(@"asyncMianIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+   
 }
 
 - (IBAction)syncMain:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_get_main_queue();
-    for (int index = 0; index <= 10; index ++) {
-        dispatch_sync(queue, ^{
-            NSLog(@"syncMainIndex: %d, currentThread: %@", index, [NSThread currentThread]);
-        });
-    }
+    dispatch_sync(queue, ^{
+        for (int index = 0; index <= 10; index ++) {
+            NSLog(@"syncMainIndex: 1-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
+    
+    dispatch_sync(queue, ^{
+        for (int index = 0; index <= 10; index ++) {
+            NSLog(@"syncMainIndex: 2-%d, currentThread: %@", index, [NSThread currentThread]);
+        }
+    });
 }
 
 - (IBAction)barrierAction:(UIButton *)sender {
@@ -134,7 +180,7 @@
 
 - (IBAction)groupAction:(UIButton *)sender {
     
-    __block int a, b, c;
+    __block int a = 0, b = 0, c = 0;
     
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
