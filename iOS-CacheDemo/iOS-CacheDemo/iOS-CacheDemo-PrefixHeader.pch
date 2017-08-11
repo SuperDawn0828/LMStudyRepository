@@ -1,0 +1,15 @@
+//
+//  iOS-CacheDemo-PrefixHeader.pch
+//  iOS-CacheDemo
+//
+//  Created by 黎明 on 2017/8/3.
+//  Copyright © 2017年 黎明. All rights reserved.
+//
+
+#ifndef iOS_CacheDemo_PrefixHeader_pch
+#define iOS_CacheDemo_PrefixHeader_pch
+
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+
+#endif /* iOS_CacheDemo_PrefixHeader_pch */

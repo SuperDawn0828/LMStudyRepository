@@ -1,0 +1,10 @@
+platform :ios, '9.0'
+
+target 'iOS-CacheDemo' do
+ use_frameworks!
+
+ pod 'MJExtension', '~> 3.0.13'
+ pod 'MJRefresh', '~> 3.1.12'
+
+end
+

@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D20C12A5BC1224B90F393511 /* Pods_iOS_CacheDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AAE1607A475EFA5E9D9B1E /* Pods_iOS_CacheDemo.framework */; };
+		E263E8971F34055400597268 /* UIImageView+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = E263E8961F34055400597268 /* UIImageView+Cache.m */; };
+		E263E89A1F340D6800597268 /* LMImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E263E8991F340D6800597268 /* LMImageTableViewCell.m */; };
+		E263E8A31F3467A400597268 /* LMImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E263E8A21F3467A400597268 /* LMImageOperation.m */; };
+		E2A54A481F3573030060F4B1 /* LMImageCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A54A471F3573030060F4B1 /* LMImageCacheFile.m */; };
+		E2A54A4E1F3578260060F4B1 /* LMImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A54A4D1F3578260060F4B1 /* LMImageCacheConfig.m */; };
+		E2E2665F1F32F472009DC7A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E2665E1F32F472009DC7A6 /* main.m */; };
+		E2E266621F32F472009DC7A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266611F32F472009DC7A6 /* AppDelegate.m */; };
+		E2E266651F32F472009DC7A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266641F32F472009DC7A6 /* ViewController.m */; };
+		E2E2666A1F32F472009DC7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E266691F32F472009DC7A6 /* Assets.xcassets */; };
+		E2E2666D1F32F472009DC7A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E2666B1F32F472009DC7A6 /* LaunchScreen.storyboard */; };
+		E2E266781F32F472009DC7A6 /* iOS_CacheDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266771F32F472009DC7A6 /* iOS_CacheDemoTests.m */; };
+		E2E266831F32F472009DC7A6 /* iOS_CacheDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266821F32F472009DC7A6 /* iOS_CacheDemoUITests.m */; };
+		E2E266921F32F491009DC7A6 /* LMCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266911F32F491009DC7A6 /* LMCommand.m */; };
+		E2E266951F3301E5009DC7A6 /* LMImageListTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266941F3301E5009DC7A6 /* LMImageListTypeModel.m */; };
+		E2E266991F33184C009DC7A6 /* ImageTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266981F33184C009DC7A6 /* ImageTypeViewController.m */; };
+		E2E2669C1F3320F8009DC7A6 /* ImageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E2669B1F3320F8009DC7A6 /* ImageListViewController.m */; };
+		E2E2669F1F332C19009DC7A6 /* LMImageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E2669E1F332C19009DC7A6 /* LMImageListModel.m */; };
+		E2E266A31F3332AE009DC7A6 /* LMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E266A21F3332AE009DC7A6 /* LMImageCache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2E266741F32F472009DC7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2E266521F32F472009DC7A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2E266591F32F472009DC7A6;
+			remoteInfo = "iOS-CacheDemo";
+		};
+		E2E2667F1F32F472009DC7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2E266521F32F472009DC7A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2E266591F32F472009DC7A6;
+			remoteInfo = "iOS-CacheDemo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15EDD3B8FEB9F721BFA1AF01 /* Pods-iOS-CacheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-CacheDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-CacheDemo/Pods-iOS-CacheDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		34AAE1607A475EFA5E9D9B1E /* Pods_iOS_CacheDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CacheDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E0137219C0252F2EA09C6B /* Pods-iOS-CacheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-CacheDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-CacheDemo/Pods-iOS-CacheDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E263E8951F34055400597268 /* UIImageView+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Cache.h"; sourceTree = "<group>"; };
+		E263E8961F34055400597268 /* UIImageView+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Cache.m"; sourceTree = "<group>"; };
+		E263E8981F340D6800597268 /* LMImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageTableViewCell.h; sourceTree = "<group>"; };
+		E263E8991F340D6800597268 /* LMImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageTableViewCell.m; sourceTree = "<group>"; };
+		E263E8A11F3467A400597268 /* LMImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageOperation.h; sourceTree = "<group>"; };
+		E263E8A21F3467A400597268 /* LMImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageOperation.m; sourceTree = "<group>"; };
+		E2A54A461F3573030060F4B1 /* LMImageCacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageCacheFile.h; sourceTree = "<group>"; };
+		E2A54A471F3573030060F4B1 /* LMImageCacheFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageCacheFile.m; sourceTree = "<group>"; };
+		E2A54A4C1F3578260060F4B1 /* LMImageCacheConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageCacheConfig.h; sourceTree = "<group>"; };
+		E2A54A4D1F3578260060F4B1 /* LMImageCacheConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageCacheConfig.m; sourceTree = "<group>"; };
+		E2E2665A1F32F472009DC7A6 /* iOS-CacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-CacheDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E2665E1F32F472009DC7A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2E266601F32F472009DC7A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2E266611F32F472009DC7A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2E266631F32F472009DC7A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2E266641F32F472009DC7A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2E266691F32F472009DC7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2E2666C1F32F472009DC7A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2E2666E1F32F472009DC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E266731F32F472009DC7A6 /* iOS-CacheDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-CacheDemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E266771F32F472009DC7A6 /* iOS_CacheDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_CacheDemoTests.m; sourceTree = "<group>"; };
+		E2E266791F32F472009DC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E2667E1F32F472009DC7A6 /* iOS-CacheDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-CacheDemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E266821F32F472009DC7A6 /* iOS_CacheDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_CacheDemoUITests.m; sourceTree = "<group>"; };
+		E2E266841F32F472009DC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E266901F32F491009DC7A6 /* LMCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCommand.h; sourceTree = "<group>"; };
+		E2E266911F32F491009DC7A6 /* LMCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCommand.m; sourceTree = "<group>"; };
+		E2E266931F3301E5009DC7A6 /* LMImageListTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageListTypeModel.h; sourceTree = "<group>"; };
+		E2E266941F3301E5009DC7A6 /* LMImageListTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageListTypeModel.m; sourceTree = "<group>"; };
+		E2E266961F330962009DC7A6 /* iOS-CacheDemo-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-CacheDemo-PrefixHeader.pch"; sourceTree = "<group>"; };
+		E2E266971F33184C009DC7A6 /* ImageTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTypeViewController.h; sourceTree = "<group>"; };
+		E2E266981F33184C009DC7A6 /* ImageTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTypeViewController.m; sourceTree = "<group>"; };
+		E2E2669A1F3320F8009DC7A6 /* ImageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageListViewController.h; sourceTree = "<group>"; };
+		E2E2669B1F3320F8009DC7A6 /* ImageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageListViewController.m; sourceTree = "<group>"; };
+		E2E2669D1F332C19009DC7A6 /* LMImageListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageListModel.h; sourceTree = "<group>"; };
+		E2E2669E1F332C19009DC7A6 /* LMImageListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageListModel.m; sourceTree = "<group>"; };
+		E2E266A11F3332AE009DC7A6 /* LMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImageCache.h; sourceTree = "<group>"; };
+		E2E266A21F3332AE009DC7A6 /* LMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImageCache.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2E266571F32F472009DC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20C12A5BC1224B90F393511 /* Pods_iOS_CacheDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E266701F32F472009DC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2667B1F32F472009DC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D231A5FEDB83300CDA788A7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34AAE1607A475EFA5E9D9B1E /* Pods_iOS_CacheDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBC971F993C09EF658136A5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15EDD3B8FEB9F721BFA1AF01 /* Pods-iOS-CacheDemo.debug.xcconfig */,
+				A5E0137219C0252F2EA09C6B /* Pods-iOS-CacheDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2E266511F32F472009DC7A6 = {
+			isa = PBXGroup;
+			children = (
+				E2E2665C1F32F472009DC7A6 /* iOS-CacheDemo */,
+				E2E266761F32F472009DC7A6 /* iOS-CacheDemoTests */,
+				E2E266811F32F472009DC7A6 /* iOS-CacheDemoUITests */,
+				E2E2665B1F32F472009DC7A6 /* Products */,
+				DBC971F993C09EF658136A5A /* Pods */,
+				D231A5FEDB83300CDA788A7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2E2665B1F32F472009DC7A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2E2665A1F32F472009DC7A6 /* iOS-CacheDemo.app */,
+				E2E266731F32F472009DC7A6 /* iOS-CacheDemoTests.xctest */,
+				E2E2667E1F32F472009DC7A6 /* iOS-CacheDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2E2665C1F32F472009DC7A6 /* iOS-CacheDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E2E266A01F33328C009DC7A6 /* LMImageCache */,
+				E2E266601F32F472009DC7A6 /* AppDelegate.h */,
+				E2E266611F32F472009DC7A6 /* AppDelegate.m */,
+				E2E266631F32F472009DC7A6 /* ViewController.h */,
+				E2E266641F32F472009DC7A6 /* ViewController.m */,
+				E2E266971F33184C009DC7A6 /* ImageTypeViewController.h */,
+				E2E266981F33184C009DC7A6 /* ImageTypeViewController.m */,
+				E2E2669A1F3320F8009DC7A6 /* ImageListViewController.h */,
+				E2E2669B1F3320F8009DC7A6 /* ImageListViewController.m */,
+				E263E8981F340D6800597268 /* LMImageTableViewCell.h */,
+				E263E8991F340D6800597268 /* LMImageTableViewCell.m */,
+				E2E266901F32F491009DC7A6 /* LMCommand.h */,
+				E2E266911F32F491009DC7A6 /* LMCommand.m */,
+				E2E266931F3301E5009DC7A6 /* LMImageListTypeModel.h */,
+				E2E266941F3301E5009DC7A6 /* LMImageListTypeModel.m */,
+				E2E2669D1F332C19009DC7A6 /* LMImageListModel.h */,
+				E2E2669E1F332C19009DC7A6 /* LMImageListModel.m */,
+				E2E266691F32F472009DC7A6 /* Assets.xcassets */,
+				E2E2666B1F32F472009DC7A6 /* LaunchScreen.storyboard */,
+				E2E2666E1F32F472009DC7A6 /* Info.plist */,
+				E2E2665D1F32F472009DC7A6 /* Supporting Files */,
+			);
+			path = "iOS-CacheDemo";
+			sourceTree = "<group>";
+		};
+		E2E2665D1F32F472009DC7A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2E2665E1F32F472009DC7A6 /* main.m */,
+				E2E266961F330962009DC7A6 /* iOS-CacheDemo-PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2E266761F32F472009DC7A6 /* iOS-CacheDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2E266771F32F472009DC7A6 /* iOS_CacheDemoTests.m */,
+				E2E266791F32F472009DC7A6 /* Info.plist */,
+			);
+			path = "iOS-CacheDemoTests";
+			sourceTree = "<group>";
+		};
+		E2E266811F32F472009DC7A6 /* iOS-CacheDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2E266821F32F472009DC7A6 /* iOS_CacheDemoUITests.m */,
+				E2E266841F32F472009DC7A6 /* Info.plist */,
+			);
+			path = "iOS-CacheDemoUITests";
+			sourceTree = "<group>";
+		};
+		E2E266A01F33328C009DC7A6 /* LMImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				E2E266A11F3332AE009DC7A6 /* LMImageCache.h */,
+				E2E266A21F3332AE009DC7A6 /* LMImageCache.m */,
+				E263E8A11F3467A400597268 /* LMImageOperation.h */,
+				E263E8A21F3467A400597268 /* LMImageOperation.m */,
+				E2A54A461F3573030060F4B1 /* LMImageCacheFile.h */,
+				E2A54A471F3573030060F4B1 /* LMImageCacheFile.m */,
+				E2A54A4C1F3578260060F4B1 /* LMImageCacheConfig.h */,
+				E2A54A4D1F3578260060F4B1 /* LMImageCacheConfig.m */,
+				E263E8951F34055400597268 /* UIImageView+Cache.h */,
+				E263E8961F34055400597268 /* UIImageView+Cache.m */,
+			);
+			path = LMImageCache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2E266591F32F472009DC7A6 /* iOS-CacheDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E266871F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemo" */;
+			buildPhases = (
+				59F562F7FD91C911E5A740EF /* [CP] Check Pods Manifest.lock */,
+				E2E266561F32F472009DC7A6 /* Sources */,
+				E2E266571F32F472009DC7A6 /* Frameworks */,
+				E2E266581F32F472009DC7A6 /* Resources */,
+				AF8CEFB57B8CEEC58AF6243E /* [CP] Embed Pods Frameworks */,
+				E368656E3F89976030DAE120 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-CacheDemo";
+			productName = "iOS-CacheDemo";
+			productReference = E2E2665A1F32F472009DC7A6 /* iOS-CacheDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2E266721F32F472009DC7A6 /* iOS-CacheDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E2668A1F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemoTests" */;
+			buildPhases = (
+				E2E2666F1F32F472009DC7A6 /* Sources */,
+				E2E266701F32F472009DC7A6 /* Frameworks */,
+				E2E266711F32F472009DC7A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2E266751F32F472009DC7A6 /* PBXTargetDependency */,
+			);
+			name = "iOS-CacheDemoTests";
+			productName = "iOS-CacheDemoTests";
+			productReference = E2E266731F32F472009DC7A6 /* iOS-CacheDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2E2667D1F32F472009DC7A6 /* iOS-CacheDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E2668D1F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemoUITests" */;
+			buildPhases = (
+				E2E2667A1F32F472009DC7A6 /* Sources */,
+				E2E2667B1F32F472009DC7A6 /* Frameworks */,
+				E2E2667C1F32F472009DC7A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2E266801F32F472009DC7A6 /* PBXTargetDependency */,
+			);
+			name = "iOS-CacheDemoUITests";
+			productName = "iOS-CacheDemoUITests";
+			productReference = E2E2667E1F32F472009DC7A6 /* iOS-CacheDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2E266521F32F472009DC7A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "黎明";
+				TargetAttributes = {
+					E2E266591F32F472009DC7A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K93GK25J3C;
+						ProvisioningStyle = Automatic;
+					};
+					E2E266721F32F472009DC7A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2E266591F32F472009DC7A6;
+					};
+					E2E2667D1F32F472009DC7A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2E266591F32F472009DC7A6;
+					};
+				};
+			};
+			buildConfigurationList = E2E266551F32F472009DC7A6 /* Build configuration list for PBXProject "iOS-CacheDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2E266511F32F472009DC7A6;
+			productRefGroup = E2E2665B1F32F472009DC7A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2E266591F32F472009DC7A6 /* iOS-CacheDemo */,
+				E2E266721F32F472009DC7A6 /* iOS-CacheDemoTests */,
+				E2E2667D1F32F472009DC7A6 /* iOS-CacheDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2E266581F32F472009DC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E2666D1F32F472009DC7A6 /* LaunchScreen.storyboard in Resources */,
+				E2E2666A1F32F472009DC7A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E266711F32F472009DC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2667C1F32F472009DC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59F562F7FD91C911E5A740EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF8CEFB57B8CEEC58AF6243E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-CacheDemo/Pods-iOS-CacheDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E368656E3F89976030DAE120 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-CacheDemo/Pods-iOS-CacheDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2E266561F32F472009DC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E266A31F3332AE009DC7A6 /* LMImageCache.m in Sources */,
+				E263E8A31F3467A400597268 /* LMImageOperation.m in Sources */,
+				E2E266651F32F472009DC7A6 /* ViewController.m in Sources */,
+				E2A54A4E1F3578260060F4B1 /* LMImageCacheConfig.m in Sources */,
+				E2E266951F3301E5009DC7A6 /* LMImageListTypeModel.m in Sources */,
+				E2A54A481F3573030060F4B1 /* LMImageCacheFile.m in Sources */,
+				E2E266621F32F472009DC7A6 /* AppDelegate.m in Sources */,
+				E2E266921F32F491009DC7A6 /* LMCommand.m in Sources */,
+				E2E266991F33184C009DC7A6 /* ImageTypeViewController.m in Sources */,
+				E263E89A1F340D6800597268 /* LMImageTableViewCell.m in Sources */,
+				E2E2669C1F3320F8009DC7A6 /* ImageListViewController.m in Sources */,
+				E263E8971F34055400597268 /* UIImageView+Cache.m in Sources */,
+				E2E2669F1F332C19009DC7A6 /* LMImageListModel.m in Sources */,
+				E2E2665F1F32F472009DC7A6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2666F1F32F472009DC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E266781F32F472009DC7A6 /* iOS_CacheDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2667A1F32F472009DC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E266831F32F472009DC7A6 /* iOS_CacheDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2E266751F32F472009DC7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2E266591F32F472009DC7A6 /* iOS-CacheDemo */;
+			targetProxy = E2E266741F32F472009DC7A6 /* PBXContainerItemProxy */;
+		};
+		E2E266801F32F472009DC7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2E266591F32F472009DC7A6 /* iOS-CacheDemo */;
+			targetProxy = E2E2667F1F32F472009DC7A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2E2666B1F32F472009DC7A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2E2666C1F32F472009DC7A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2E266851F32F472009DC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2E266861F32F472009DC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2E266881F32F472009DC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EDD3B8FEB9F721BFA1AF01 /* Pods-iOS-CacheDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K93GK25J3C;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-CacheDemo/iOS-CacheDemo-PrefixHeader.pch";
+				INFOPLIST_FILE = "iOS-CacheDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2E266891F32F472009DC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E0137219C0252F2EA09C6B /* Pods-iOS-CacheDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K93GK25J3C;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-CacheDemo/iOS-CacheDemo-PrefixHeader.pch";
+				INFOPLIST_FILE = "iOS-CacheDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2E2668B1F32F472009DC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "iOS-CacheDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-CacheDemo.app/iOS-CacheDemo";
+			};
+			name = Debug;
+		};
+		E2E2668C1F32F472009DC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "iOS-CacheDemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-CacheDemo.app/iOS-CacheDemo";
+			};
+			name = Release;
+		};
+		E2E2668E1F32F472009DC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iOS-CacheDemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "iOS-CacheDemo";
+			};
+			name = Debug;
+		};
+		E2E2668F1F32F472009DC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iOS-CacheDemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "liming.iOS-CacheDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "iOS-CacheDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2E266551F32F472009DC7A6 /* Build configuration list for PBXProject "iOS-CacheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E266851F32F472009DC7A6 /* Debug */,
+				E2E266861F32F472009DC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E266871F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E266881F32F472009DC7A6 /* Debug */,
+				E2E266891F32F472009DC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E2668A1F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E2668B1F32F472009DC7A6 /* Debug */,
+				E2E2668C1F32F472009DC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E2668D1F32F472009DC7A6 /* Build configuration list for PBXNativeTarget "iOS-CacheDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E2668E1F32F472009DC7A6 /* Debug */,
+				E2E2668F1F32F472009DC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2E266521F32F472009DC7A6 /* Project object */;
+}
