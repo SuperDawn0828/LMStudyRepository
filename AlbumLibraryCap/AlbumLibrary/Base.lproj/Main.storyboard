@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlbumLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-eG-1A6">
+                                <rect key="frame" x="20" y="70" width="152.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.52959556529999996" blue="0.44994634220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xRl-Fs-5Nw"/>
+                                </constraints>
+                                <state key="normal" title="相机"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNp-gC-FY2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-SM-FCJ">
+                                <rect key="frame" x="202.5" y="70" width="152.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.52959556529999996" blue="0.44994634220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vh0-55-cHu"/>
+                                </constraints>
+                                <state key="normal" title="相册"/>
+                                <connections>
+                                    <action selector="buttonTwoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxZ-er-5o1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y8R-a3-w3Z">
+                                <rect key="frame" x="62" y="397" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Tya-Ee-hxO"/>
+                                    <constraint firstAttribute="width" constant="250" id="uMs-vs-DV9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y8R-a3-w3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gcz-Nl-sNz"/>
+                            <constraint firstItem="hhG-eG-1A6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="HaY-Wr-GY0"/>
+                            <constraint firstItem="qgD-SM-FCJ" firstAttribute="width" secondItem="hhG-eG-1A6" secondAttribute="width" id="It5-5L-yS2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y8R-a3-w3Z" secondAttribute="bottom" constant="20" id="O6H-TL-3Tv"/>
+                            <constraint firstItem="qgD-SM-FCJ" firstAttribute="leading" secondItem="hhG-eG-1A6" secondAttribute="trailing" constant="30" id="OnE-8e-o08"/>
+                            <constraint firstItem="qgD-SM-FCJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Ors-hm-WNX"/>
+                            <constraint firstItem="hhG-eG-1A6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="bHr-7a-lDv"/>
+                            <constraint firstAttribute="trailing" secondItem="qgD-SM-FCJ" secondAttribute="trailing" constant="20" id="jYJ-5O-JLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="y8R-a3-w3Z" id="oq8-i4-UtY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="99"/>
+        </scene>
+    </scenes>
+</document>
