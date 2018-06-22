@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2DF3CCC1F4BC5FA00EE56DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CCB1F4BC5FA00EE56DA /* main.m */; };
+		E2DF3CCF1F4BC5FA00EE56DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CCE1F4BC5FA00EE56DA /* AppDelegate.m */; };
+		E2DF3CD21F4BC5FA00EE56DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CD11F4BC5FA00EE56DA /* ViewController.m */; };
+		E2DF3CD51F4BC5FA00EE56DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DF3CD31F4BC5FA00EE56DA /* Main.storyboard */; };
+		E2DF3CD71F4BC5FA00EE56DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2DF3CD61F4BC5FA00EE56DA /* Assets.xcassets */; };
+		E2DF3CDA1F4BC5FA00EE56DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DF3CD81F4BC5FA00EE56DA /* LaunchScreen.storyboard */; };
+		E2DF3CE51F4BC5FA00EE56DA /* LMAVPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CE41F4BC5FA00EE56DA /* LMAVPlayerDemoTests.m */; };
+		E2DF3CF01F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CEF1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.m */; };
+		E2DF3D001F4BC63700EE56DA /* LMPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DF3CFF1F4BC63700EE56DA /* LMPlayerManager.m */; };
+		E2DF3D031F4BC88A00EE56DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DF3D021F4BC88A00EE56DA /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2DF3CE11F4BC5FA00EE56DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2DF3CBF1F4BC5FA00EE56DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DF3CC61F4BC5FA00EE56DA;
+			remoteInfo = LMAVPlayerDemo;
+		};
+		E2DF3CEC1F4BC5FA00EE56DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2DF3CBF1F4BC5FA00EE56DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DF3CC61F4BC5FA00EE56DA;
+			remoteInfo = LMAVPlayerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2DF3CC71F4BC5FA00EE56DA /* LMAVPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMAVPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DF3CCB1F4BC5FA00EE56DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2DF3CCD1F4BC5FA00EE56DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2DF3CCE1F4BC5FA00EE56DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2DF3CD01F4BC5FA00EE56DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2DF3CD11F4BC5FA00EE56DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2DF3CD41F4BC5FA00EE56DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2DF3CD61F4BC5FA00EE56DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2DF3CD91F4BC5FA00EE56DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2DF3CDB1F4BC5FA00EE56DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DF3CE01F4BC5FA00EE56DA /* LMAVPlayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMAVPlayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DF3CE41F4BC5FA00EE56DA /* LMAVPlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMAVPlayerDemoTests.m; sourceTree = "<group>"; };
+		E2DF3CE61F4BC5FA00EE56DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DF3CEB1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMAVPlayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DF3CEF1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMAVPlayerDemoUITests.m; sourceTree = "<group>"; };
+		E2DF3CF11F4BC5FA00EE56DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DF3CFE1F4BC63700EE56DA /* LMPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlayerManager.h; sourceTree = "<group>"; };
+		E2DF3CFF1F4BC63700EE56DA /* LMPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlayerManager.m; sourceTree = "<group>"; };
+		E2DF3D021F4BC88A00EE56DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2DF3CC41F4BC5FA00EE56DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DF3D031F4BC88A00EE56DA /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CDD1F4BC5FA00EE56DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CE81F4BC5FA00EE56DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2DF3CBE1F4BC5FA00EE56DA = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CC91F4BC5FA00EE56DA /* LMAVPlayerDemo */,
+				E2DF3CE31F4BC5FA00EE56DA /* LMAVPlayerDemoTests */,
+				E2DF3CEE1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests */,
+				E2DF3CC81F4BC5FA00EE56DA /* Products */,
+				E2DF3D011F4BC88A00EE56DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2DF3CC81F4BC5FA00EE56DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CC71F4BC5FA00EE56DA /* LMAVPlayerDemo.app */,
+				E2DF3CE01F4BC5FA00EE56DA /* LMAVPlayerDemoTests.xctest */,
+				E2DF3CEB1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2DF3CC91F4BC5FA00EE56DA /* LMAVPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CFD1F4BC61200EE56DA /* LMAVPlayer */,
+				E2DF3CCD1F4BC5FA00EE56DA /* AppDelegate.h */,
+				E2DF3CCE1F4BC5FA00EE56DA /* AppDelegate.m */,
+				E2DF3CD01F4BC5FA00EE56DA /* ViewController.h */,
+				E2DF3CD11F4BC5FA00EE56DA /* ViewController.m */,
+				E2DF3CD31F4BC5FA00EE56DA /* Main.storyboard */,
+				E2DF3CD61F4BC5FA00EE56DA /* Assets.xcassets */,
+				E2DF3CD81F4BC5FA00EE56DA /* LaunchScreen.storyboard */,
+				E2DF3CDB1F4BC5FA00EE56DA /* Info.plist */,
+				E2DF3CCA1F4BC5FA00EE56DA /* Supporting Files */,
+			);
+			path = LMAVPlayerDemo;
+			sourceTree = "<group>";
+		};
+		E2DF3CCA1F4BC5FA00EE56DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CCB1F4BC5FA00EE56DA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2DF3CE31F4BC5FA00EE56DA /* LMAVPlayerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CE41F4BC5FA00EE56DA /* LMAVPlayerDemoTests.m */,
+				E2DF3CE61F4BC5FA00EE56DA /* Info.plist */,
+			);
+			path = LMAVPlayerDemoTests;
+			sourceTree = "<group>";
+		};
+		E2DF3CEE1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CEF1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.m */,
+				E2DF3CF11F4BC5FA00EE56DA /* Info.plist */,
+			);
+			path = LMAVPlayerDemoUITests;
+			sourceTree = "<group>";
+		};
+		E2DF3CFD1F4BC61200EE56DA /* LMAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3CFE1F4BC63700EE56DA /* LMPlayerManager.h */,
+				E2DF3CFF1F4BC63700EE56DA /* LMPlayerManager.m */,
+			);
+			path = LMAVPlayer;
+			sourceTree = "<group>";
+		};
+		E2DF3D011F4BC88A00EE56DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2DF3D021F4BC88A00EE56DA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2DF3CC61F4BC5FA00EE56DA /* LMAVPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DF3CF41F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemo" */;
+			buildPhases = (
+				E2DF3CC31F4BC5FA00EE56DA /* Sources */,
+				E2DF3CC41F4BC5FA00EE56DA /* Frameworks */,
+				E2DF3CC51F4BC5FA00EE56DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMAVPlayerDemo;
+			productName = LMAVPlayerDemo;
+			productReference = E2DF3CC71F4BC5FA00EE56DA /* LMAVPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2DF3CDF1F4BC5FA00EE56DA /* LMAVPlayerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DF3CF71F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemoTests" */;
+			buildPhases = (
+				E2DF3CDC1F4BC5FA00EE56DA /* Sources */,
+				E2DF3CDD1F4BC5FA00EE56DA /* Frameworks */,
+				E2DF3CDE1F4BC5FA00EE56DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2DF3CE21F4BC5FA00EE56DA /* PBXTargetDependency */,
+			);
+			name = LMAVPlayerDemoTests;
+			productName = LMAVPlayerDemoTests;
+			productReference = E2DF3CE01F4BC5FA00EE56DA /* LMAVPlayerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2DF3CEA1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DF3CFA1F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemoUITests" */;
+			buildPhases = (
+				E2DF3CE71F4BC5FA00EE56DA /* Sources */,
+				E2DF3CE81F4BC5FA00EE56DA /* Frameworks */,
+				E2DF3CE91F4BC5FA00EE56DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2DF3CED1F4BC5FA00EE56DA /* PBXTargetDependency */,
+			);
+			name = LMAVPlayerDemoUITests;
+			productName = LMAVPlayerDemoUITests;
+			productReference = E2DF3CEB1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2DF3CBF1F4BC5FA00EE56DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "黎明";
+				TargetAttributes = {
+					E2DF3CC61F4BC5FA00EE56DA = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					E2DF3CDF1F4BC5FA00EE56DA = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2DF3CC61F4BC5FA00EE56DA;
+					};
+					E2DF3CEA1F4BC5FA00EE56DA = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2DF3CC61F4BC5FA00EE56DA;
+					};
+				};
+			};
+			buildConfigurationList = E2DF3CC21F4BC5FA00EE56DA /* Build configuration list for PBXProject "LMAVPlayerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2DF3CBE1F4BC5FA00EE56DA;
+			productRefGroup = E2DF3CC81F4BC5FA00EE56DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2DF3CC61F4BC5FA00EE56DA /* LMAVPlayerDemo */,
+				E2DF3CDF1F4BC5FA00EE56DA /* LMAVPlayerDemoTests */,
+				E2DF3CEA1F4BC5FA00EE56DA /* LMAVPlayerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2DF3CC51F4BC5FA00EE56DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DF3CDA1F4BC5FA00EE56DA /* LaunchScreen.storyboard in Resources */,
+				E2DF3CD71F4BC5FA00EE56DA /* Assets.xcassets in Resources */,
+				E2DF3CD51F4BC5FA00EE56DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CDE1F4BC5FA00EE56DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CE91F4BC5FA00EE56DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2DF3CC31F4BC5FA00EE56DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DF3CD21F4BC5FA00EE56DA /* ViewController.m in Sources */,
+				E2DF3D001F4BC63700EE56DA /* LMPlayerManager.m in Sources */,
+				E2DF3CCF1F4BC5FA00EE56DA /* AppDelegate.m in Sources */,
+				E2DF3CCC1F4BC5FA00EE56DA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CDC1F4BC5FA00EE56DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DF3CE51F4BC5FA00EE56DA /* LMAVPlayerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DF3CE71F4BC5FA00EE56DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DF3CF01F4BC5FA00EE56DA /* LMAVPlayerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2DF3CE21F4BC5FA00EE56DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DF3CC61F4BC5FA00EE56DA /* LMAVPlayerDemo */;
+			targetProxy = E2DF3CE11F4BC5FA00EE56DA /* PBXContainerItemProxy */;
+		};
+		E2DF3CED1F4BC5FA00EE56DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DF3CC61F4BC5FA00EE56DA /* LMAVPlayerDemo */;
+			targetProxy = E2DF3CEC1F4BC5FA00EE56DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2DF3CD31F4BC5FA00EE56DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DF3CD41F4BC5FA00EE56DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2DF3CD81F4BC5FA00EE56DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2DF3CD91F4BC5FA00EE56DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2DF3CF21F4BC5FA00EE56DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2DF3CF31F4BC5FA00EE56DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2DF3CF51F4BC5FA00EE56DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LMAVPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2DF3CF61F4BC5FA00EE56DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LMAVPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2DF3CF81F4BC5FA00EE56DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LMAVPlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LMAVPlayerDemo.app/LMAVPlayerDemo";
+			};
+			name = Debug;
+		};
+		E2DF3CF91F4BC5FA00EE56DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LMAVPlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LMAVPlayerDemo.app/LMAVPlayerDemo";
+			};
+			name = Release;
+		};
+		E2DF3CFB1F4BC5FA00EE56DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LMAVPlayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LMAVPlayerDemo;
+			};
+			name = Debug;
+		};
+		E2DF3CFC1F4BC5FA00EE56DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LMAVPlayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liming.LMAVPlayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LMAVPlayerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2DF3CC21F4BC5FA00EE56DA /* Build configuration list for PBXProject "LMAVPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DF3CF21F4BC5FA00EE56DA /* Debug */,
+				E2DF3CF31F4BC5FA00EE56DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DF3CF41F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DF3CF51F4BC5FA00EE56DA /* Debug */,
+				E2DF3CF61F4BC5FA00EE56DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DF3CF71F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DF3CF81F4BC5FA00EE56DA /* Debug */,
+				E2DF3CF91F4BC5FA00EE56DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2DF3CFA1F4BC5FA00EE56DA /* Build configuration list for PBXNativeTarget "LMAVPlayerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DF3CFB1F4BC5FA00EE56DA /* Debug */,
+				E2DF3CFC1F4BC5FA00EE56DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2DF3CBF1F4BC5FA00EE56DA /* Project object */;
+}
