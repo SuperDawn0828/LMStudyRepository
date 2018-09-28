@@ -47,6 +47,18 @@ DEPENDENCIES:
   - UMengUShare/Social/ReducedSina
   - UMengUShare/Social/ReducedWeChat
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
+    - BaiduMapKit
+    - MBProgressHUD
+    - MJRefresh
+    - SDWebImage
+    - UMengUShare
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
@@ -60,4 +72,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ce0a56f735de42e0bc3786aeb1fef132b69e64ce
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.5.3
